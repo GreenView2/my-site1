@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои задачи</title>
+    <link rel="stylesheet" href="../Новая папка/css/style.css">
+</head>
+<body>
+    <div class="Header">
+            <a href="./main.html"><p class="IconHead">Уникум — Вместо тысячи строк</p></a>
+                <a href="./vhod.html"></a><button class="user">
+                        <p class="usertext">Войти</p>
+                </button></a>
+        </div>
+    <div class="cente1">
+        <div class="container">
+            <p>Мои сохраненные задачи</p>        
+            <div id="tasksContainer">
+                <!-- Здесь будут отображаться задачи -->
+                <div class="task">
+                    <div class="part1">
+                    <p class="tipTask">${task.workType}</p>
+                    <p class="themaTask">${task.topic}</p>
+                    </div>
+                    <p class="dopTask">${task.additionalInfo}</p>
+                    <div class="delbtn">
+                    <!-- <button class="delete-btn" onclick="deleteTask(${task.id})">Отменить</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

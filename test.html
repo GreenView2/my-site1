@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Visibility без JS</title>
+    <style>
+        /* Спрячем чекбокс */
+        #toggle {
+            display: none;
+        }
+
+        /* Объекты, которые будем скрывать/показывать */
+        .object {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            margin: 10px;
+        }
+
+        /* Первая кнопка (показывается, если чекбокс НЕ отмечен) */
+        #showButton {
+            display: block;
+        }
+
+        /* Вторая кнопка (показывается, если чекбокс отмечен) */
+        #hideButton {
+            display: none;
+        }
+
+        /* Прячем объекты и первую кнопку, если чекбокс отмечен */
+        #toggle:checked ~ .object,
+        #toggle:checked ~ #showButton {
+            display: none;
+        }
+
+        /* Показываем вторую кнопку, если чекбокс отмечен */
+        #toggle:checked ~ #hideButton {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Чекбокс, который управляет видимостью -->
+    <input type="checkbox" id="toggle">
+
+    <!-- Объекты, которые нужно скрывать/показывать -->
+    <div class="object">Объект 1</div>
+    <div class="object">Объект 2</div>
+
+    <!-- Кнопка "Скрыть" (исчезает после нажатия) -->
+    <label for="toggle" id="showButton">Скрыть объекты</label>
+
+    <!-- Кнопка "Показать" (появляется после скрытия) -->
+    <label for="toggle" id="hideButton">Показать объекты</label>
+</body>
+</html>
